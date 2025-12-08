@@ -1,6 +1,6 @@
-import { defineConfig } from "@prisma/internals";
+const { defineConfig } = require("@prisma/internals");
 
-export default defineConfig({
+module.exports = defineConfig({
   datasources: {
     db: {
       url: process.env.DATABASE_URL,
@@ -8,3 +8,4 @@ export default defineConfig({
     },
   },
 });
+
