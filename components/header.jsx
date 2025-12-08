@@ -5,6 +5,7 @@ import Link from "next/link";
 import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/nextjs";
 import { checkUser } from "@/lib/checkUser";
 import Image from "next/image";
+import { ThemeToggle } from "./theme-toggle";
 
 const Header = async () => {
   await checkUser();
@@ -39,6 +40,7 @@ const Header = async () => {
 
         {/* Action Buttons */}
         <div className="flex items-center space-x-4">
+          <ThemeToggle />
           <SignedIn>
             <Link
               href="/dashboard"
